@@ -1,0 +1,10 @@
+This Docker Image is to fullfill a use case for having a copy of Ubuntu 20.04 Focal repo on local storage.  For those who are Docker newbies, you can build the container by typing:
+
+docker build -t <containername> .
+To run the container to perform a 1 time sync, cd into the directory in which you would like to store the Focal repo (Ubuntu 20.04) and run the following command:
+
+docker run --rm -v(pwd):/apt <containername>
+
+The repo once synchronised will be stored in /apt directory in which you cd'd to previously.
+
+hope that helps. 
